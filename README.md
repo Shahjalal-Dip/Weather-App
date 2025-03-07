@@ -76,7 +76,12 @@ weather-app/
 │   │   └── styles.css     # Global styles
 │   ├── .env               # Environment variables
 │   └── package.json
-├── server/                # Express backend
+├── backend/               # Express backend
+│   ├──config/             # database connection
+│   ├──controllers/        # controls routes
+│   ├──middleware/         # authenticateToken
+│   ├──models/             # database schema
+│   ├──routes/             # serve routes
 │   ├── server.js          # Main server file
 │   ├── .env               # Environment variables
 │   └── package.json
