@@ -45,7 +45,7 @@ A full-stack weather application built with the PERN stack (PostgreSQL, Express,
 
 1. Navigate to the client directory and install dependencies:
    ```
-   cd client
+   cd frontend
    npm install
    ```
 
@@ -65,7 +65,7 @@ A full-stack weather application built with the PERN stack (PostgreSQL, Express,
 
 ```
 weather-app/
-├── client/                # React frontend
+├── frontend/                # React frontend
 │   ├── public/
 │   ├── src/
 │   │   ├── components/    # React components
