@@ -12,7 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({ 
-  origin: ['http://localhost:3000', 'https://frontend-lrsd5t57t-shah-jalal-dips-projects.vercel.app'], 
+  origin: ['http://localhost:3000', 'https://frontend-cusyw1roe-shah-jalal-dips-projects.vercel.app'], 
   credentials: true 
 }));
 
