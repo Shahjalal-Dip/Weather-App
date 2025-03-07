@@ -5,8 +5,9 @@ dotenv.config();
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  database: 'weatherapp',
-});
-
-module.exports = pool;
+  ssl: { rejectUnauthorized: false }, // Required for Supabase connection
+    database: 'weatherapp',
+  });
+ 
+  module.exports = pool;
 
