@@ -1,5 +1,5 @@
 // services/authService.js
-const API_URL = 'http://weather-app-production-bc2b.up.railway.app/api';
+const API_URL = 'http://localhost:5000/api';
 
 export const register = async (username, password) => {
   try {
