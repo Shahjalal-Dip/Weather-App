@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const dotenv = require('dotenv');
+const pool = require('./config/db')
 
 dotenv.config();
 
@@ -20,7 +21,12 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.get('/', async (req, res) => {
-  res.json({ "name":"babu" });
+  const { username } = req.body;
+  const userExists = await pool.query('SELECT * FROM users WHERE username = $1', [username]);
+
+    if (userExists.rows.length > 0) {
+      return res.status(400).json({ message: 'Username already taken'});
+    }
 });
 
 app.use('/api/auth', authRoutes);
