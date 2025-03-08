@@ -19,6 +19,9 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 
+app.get('/', async (req, res) => {
+  res.json({ "name":"babu" });
+});
 
 app.use('/api/auth', authRoutes);
 app.use('/api/locations', locationRoutes);
